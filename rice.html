@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+
+	<meta charset="UTF-8">
+		<style>p.test1
+	{
+	width:35em; 
+	text-wrap:none;
+	}
+	</style>
+	<title>Vientiane House Restaurant</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<!-- Initialise links and scripts -->
+	<link rel="stylesheet" href="jquery.mobile.structure-1.0.1.css" />
+	<link rel="apple-touch-icon" href="images/launch_icon_57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="images/launch_icon_72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="images/launch_icon_114.png" />
+	<link rel="stylesheet" href="jquery.mobile-1.0.1.css" />
+	<link rel="stylesheet" href="custom.css" />
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.mobile-1.0.1.min.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	
+	
+</head> 
+<body> 
+<div id="choisir_ville" data-role="page" data-add-back-btn="true">
+	<!-- Back button -->
+	<div data-role="header"> 
+		<h1> Vientiane House</h1>
+	</div> 
+	<!-- Insert cuisine discription, photo and price -->
+	<div data-role="content">
+	<div class="ui-grid-a" id="restau_infos">	
+		<div class="ui-block-a">
+		<h1> Steam Sticky Rice</h1>
+		<p><strong>  PRICE: $5.00</strong></p>
+		<p> About: </p>
+			<p class="test1"> Sticky Rice is the main food of the Lao. Sticky, or "glutinous" rice has been growing in mainland Southeast Asia for at least 4,000 years. Unlike Khao Chow, which is jasmine rice, sticky rice is always served in a bamboo basket. </p>			
+		</div>		
+		<div class="ui-block-b">
+		<p><img src="images\sticky_rice.jpg" /></p>
+		</div>
+	</div><!-- /grid-a -->
+	<hr/>
+	
+<!-- /grid-a -->
+	<!-- Link to contact.html page -->
+	<div id="contact_buttons">	
+		<a href="Contact.html" data-role="button" data-icon="maps"> Find Us </a> 	
+	</div>	
+	<hr/>
+	<!-- Footnote with Deakin copy right -->
+	<div data-role="footer" data-theme="c" data-position="fixed">
+    <h3>(C) DEakin Univeristy 2015</h3>
+	</div>
+
+</div><!-- /page -->
+</body>
+</html>
