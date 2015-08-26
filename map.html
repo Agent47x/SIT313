@@ -20,36 +20,10 @@
 	<link rel="stylesheet" href="custom.css" />	
 	<script src="js/jquery-1.7.1.min.js"></script>
 	<script src="js/jquery.mobile-1.0.1.min.js"></script>
-	<script src="http://maps.googleapis.com/maps/api/js"></script>
-	
-
-
-	
-</head> 
-<body> 
-<!-- back button-->
-<div id="choisir_ville" data-role="page" >
-	
-	<div data-role="header"> 
-		<h1> Vientaine House</h1>
-	</div> 
-	
-<!-- /grid-a -->
-	<hr/>
-	
-	<div class="ui-grid-a" id="contact_infos">	
-		
-		<div class="ui-block-b">
-		<div id="googleMap" style="width:500px;height:380px;"></div>
-		</div>
-		
-	</div><!-- /grid-a -->
-	<div id="contact_buttons">	
-			
-		<a href="tel:0392585733"  data-role="button" data-icon="tel"> Call us </a>	
-	</div>	
-	<hr/>
-	<script>
+	<script
+src="http://maps.googleapis.com/maps/api/js">
+</script>
+<script>
 var myCenter=new google.maps.LatLng(-37.9122063,145.0636368,15);
 
 function initialize()
@@ -77,56 +51,36 @@ google.maps.event.addListener(marker,'click',function() {
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 </script>
-	<!-- Rating from user -->
-	<div id="notation">	
-	<form>
-	<label for="select-choice-0" class="select"><h2> Rate Us </h2></label>
-		<select name="note_utilisateur" id="note_utilisateur" data-native-menu="false" data-theme="c" >
-		   <option value="one" class="one"> Not good at all </option>
-		   <option value="two" class="two">Average </option>
-		   <option value="three" class="three">Pretty good </option>
-		   <option value="four" class="four"> Excellent </option>
-		</select>	
-	</form>
-	</div>
 
-	<!-- Script for rating -->
-	<script type="text/javascript">
-
-	$( '#restau' ).live( 'pageinit',function(event){
-		var SelectedOptionClass = $('option:selected').attr('class');
-		$('div.ui-select').addClass(SelectedOptionClass);
-		
-		$('#note_utilisateur').live('change', function(){	 
-			$('div.ui-select').removeClass(SelectedOptionClass);
-			
-			SelectedOptionClass = $('option:selected').attr('class');
-			$('div.ui-select').addClass(SelectedOptionClass);		
-			
-		 });
-		
-	  
-	});
-
-	</script>
-	<!-- Feedback from user -->
-	<h1 is="gk-text" >Feedbacks</h1>
-    <div class="ui-field-contain">
-      <label for="gk-826xB5b">Your Name:</label>
-      <input type="text" name id="gk-826xB5b">
-    </div>
-    <div class="ui-field-contain">
-      <label for="gk-826fv5M">Email Address:</label>
-      <input type="text" name id="gk-826fv5M">
-    </div>
-	<div data-role="fieldcontain">
-<label for="textarea">Feedback:</label>
-	<textarea name="textarea" id="textarea"></textarea>
-</div>
-    <a   data-role="button" > Submit </a>
-
-	</div>
 	
+
+
+	
+</head> 
+<body> 
+<!-- back button-->
+<div id="choisir_ville" data-role="page" data-add-back-btn="true">
+	
+	<div data-role="header"> 
+		<h1> Vientaine House</h1>
+	</div> 
+	
+<!-- /grid-a -->
+	<hr/>
+	
+	<div class="ui-grid-a" id="contact_infos">	
+		
+		<div class="ui-block-b">
+		<div id="googleMap" style="width:500px;height:380px;"></div>
+		</div>
+		
+	</div><!-- /grid-a -->
+	<div id="contact_buttons">	
+			
+		<a href="tel:0392585733"  data-role="button" data-icon="tel"> Call us </a>	
+	</div>	
+	<hr/>
+
 
 	<!-- Footnote with Deakin copy right -->
 	<div data-role="footer" data-theme="c" data-position="fixed">
