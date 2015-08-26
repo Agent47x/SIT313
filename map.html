@@ -9,6 +9,7 @@
 	text-wrap:none;
 	}
 	</style>
+	<!-- Initialise links and scripts -->
 	<title>Vientiane House Restaurant</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="jquery.mobile.structure-1.0.1.css" />
@@ -26,7 +27,8 @@
 	
 </head> 
 <body> 
-<div id="choisir_ville" data-role="page" data-add-back-btn="true">
+<!-- back button-->
+<div id="choisir_ville" data-role="page" >
 	
 	<div data-role="header"> 
 		<h1> Vientaine House</h1>
@@ -75,6 +77,7 @@ google.maps.event.addListener(marker,'click',function() {
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 </script>
+	<!-- Rating from user -->
 	<div id="notation">	
 	<form>
 	<label for="select-choice-0" class="select"><h2> Rate Us </h2></label>
@@ -87,7 +90,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 	</form>
 	</div>
 
-
+	<!-- Script for rating -->
 	<script type="text/javascript">
 
 	$( '#restau' ).live( 'pageinit',function(event){
@@ -106,6 +109,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 	});
 
 	</script>
+	<!-- Feedback from user -->
 	<h1 is="gk-text" >Feedbacks</h1>
     <div class="ui-field-contain">
       <label for="gk-826xB5b">Your Name:</label>
@@ -124,7 +128,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 	</div>
 	
 
-	
+	<!-- Footnote with Deakin copy right -->
 	<div data-role="footer" data-theme="c" data-position="fixed">
     <h3>(C) DEakin Univeristy 2015</h3>
 	</div>

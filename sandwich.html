@@ -11,6 +11,7 @@
 	</style>
 	<title>Vientiane House Restaurant</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<!-- Initialise links and scripts -->
 	<link rel="stylesheet" href="jquery.mobile.structure-1.0.1.css" />
 	<link rel="apple-touch-icon" href="images/launch_icon_57.png" />
 	<link rel="apple-touch-icon" sizes="72x72" href="images/launch_icon_72.png" />
@@ -21,44 +22,15 @@
 	<script src="js/jquery.mobile-1.0.1.min.js"></script>
 	<script src="http://maps.googleapis.com/maps/api/js"></script>
 	
-
-<script>
-var myCenter=new google.maps.LatLng(-37.9122063,145.0636368,15);
-
-function initialize()
-{
-var mapProp = {
-  center: myCenter,
-  zoom:15,
-  mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-var marker = new google.maps.Marker({
-  position: myCenter,
-  title:'Click to zoom'
-  });
-
-marker.setMap(map);
-
-// Zoom to 9 when clicking on marker
-google.maps.event.addListener(marker,'click',function() {
-  map.setZoom(9);
-  map.setCenter(marker.getPosition());
-  });
-}
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
 	
 </head> 
 <body> 
 <div id="choisir_ville" data-role="page" data-add-back-btn="true">
-	
+	<!-- Back button -->
 	<div data-role="header"> 
 		<h1> Restaurant Picker</h1>
 	</div> 
-	
+	<!-- Insert cuisine discription, photo and price -->
 	<div data-role="content">
 	<div class="ui-grid-a" id="restau_infos">	
 		<div class="ui-block-a">
@@ -74,11 +46,12 @@ google.maps.event.addDomListener(window, 'load', initialize);
 	<hr/>
 	
 <!-- /grid-a -->
+	<!-- Link to contact.html page -->
 	<div id="contact_buttons">	
 		<a href="Contact.html" data-role="button" data-icon="maps"> Find Us </a> 	
 	</div>	
 	<hr/>
-	
+	<!-- Footnote with Deakin copy right -->
 	<div data-role="footer" data-theme="c" data-position="fixed">
     <h3>(C) DEakin Univeristy 2015</h3>
 	</div>
