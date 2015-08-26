@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="feedback_style.css">
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.mobile-1.0.1.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+  $("#feedback_button").click(function(){
+    form();
+  });
+});
+	
+function form()
+{
+  $("form").slideToggle();
+}
+</script>
+
+</head>
+
+<body>
+
+
+
+  <div id="form">
+    <p id="feedback_button">Feedback</p>
+    
+	<form method="post" action="">
+      <input type="text" id="name" placeholder="Name">
+      <br>
+      <input type="text" id="email" placeholder="Email">
+      <br>
+      <textarea id="feedback" placeholder="Feedback"></textarea>
+      <br>
+      <input type="submit" id="submit_feedback" values="Submit">
+    </form>
+  </div>
+
+</body>
+</html>
